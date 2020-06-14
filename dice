@@ -1,0 +1,33 @@
+import random
+
+
+def welcome():
+    print("Welcome to the dice roler.")
+    print("Please use only even numbers.")
+
+def dice():
+        
+    dado = int(input("Input an number (it will be the number of faces the dice has): "))
+
+    if dado % 2 == 0:
+        for x in range (1):
+            print (random.randint(1,dado))
+                
+
+    elif dado % 2 != 0:
+       print("You can't use this number, I'm so sorry.")
+
+    again()
+        
+
+def again():
+    answer = input("Do you wanna roll it again? yes/no\n")
+
+    if answer == "yes":
+        dice()
+
+    else:
+        print("See you later!")
+
+welcome()
+dice()
